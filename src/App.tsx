@@ -1,9 +1,29 @@
+import { useState, useEffect } from 'react'
 import Footer from './components/Footer/Footer'
-import GameTable from './components/GameTable/GameTable'
+import TicTacField from './components/TicTacField/TicTacField'
 import Header from './components/Header/Header'
 
 function App() {
-  const arrayTest = ['11','2','3','4','5','6','7','8','9']
+
+  const [crossTurn, setCrossTurn] = useState(true)
+  const [clickTicTac, setClickTicTac] = useState(false)
+  const [tableTicTac, setTableTicTac] = useState([ '', '', '', '', '', '', '', '', ''])
+
+  useEffect(() => {
+    if (clickTicTac) {
+      setCrossTurn(!crossTurn)
+      setClickTicTac(false)
+    }
+  }, [clickTicTac])
+
+  const markTable = (idx: number) => {
+    setClickTicTac(true)
+    const newTable = tableTicTac;
+    newTable[idx] = crossTurn ? 'cross' : 'noCross'
+    setTableTicTac(newTable)
+  }
+  
+
   return (
     <>
       <main className='bg-[#192A32] h-screen w-screen grid place-content-center'>
@@ -12,8 +32,12 @@ function App() {
             wrapperClassName='mb-5'
           />
           <div className="grid grid-cols-3 gap-4 w-full mb-5">
-            {arrayTest.map(item => 
-              <GameTable>{item}</GameTable>)}
+            {tableTicTac.map((item, idx) => 
+              <TicTacField 
+                key={idx.toString()} 
+                markTable={() => markTable(idx)} 
+                typeIcon={item} />)
+            }
           </div>
           <Footer />
         </section>
