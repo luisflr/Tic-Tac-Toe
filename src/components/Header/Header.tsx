@@ -5,7 +5,7 @@ import ReloadIcon from '../../assets/icons/ReloadIcon'
 import XIcon from '../../assets/icons/XIcon'
 import CircleIcon from '../../assets/icons/CircleIcon'
 
-function Header({ wrapperClassName }: HeaderProps) {
+function Header({ wrapperClassName, turn }: HeaderProps) {
   return (
     <header className={`${wrapperClassName || ''} flex justify-between items-center w-full`}>
       <div className='flex'>
@@ -22,10 +22,17 @@ function Header({ wrapperClassName }: HeaderProps) {
         wrapperClassName='bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
         label='TURN'
       >
-        <XIcon
-          wrapperClassName='w-5 h-5 mr-2'
-          strokeColor='#A9BFCA'
-        />
+        {turn
+          ? <XIcon
+              wrapperClassName='w-5 h-5 mr-2'
+              strokeColor='#A9BFCA'
+            />
+          : <CircleIcon
+              wrapperClassName='w-5 h-5 mr-2'
+              strokeColor='#A9BFCA'
+            />
+        
+        }
       </Button>
       <Button
         wrapperClassName='bg-[#A9BFCA] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
