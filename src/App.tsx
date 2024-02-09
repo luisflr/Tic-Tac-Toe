@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Footer from './components/Footer/Footer'
 import TicTacField from './components/TicTacField/TicTacField'
 import Header from './components/Header/Header'
+import Modal from './components/Modal/Modal'
 
 function App() {
 
@@ -45,16 +46,19 @@ function App() {
     <>
       <main className='bg-[#192A32] h-screen w-screen grid place-content-center'>
         <section className='w-[470px] max-h-[800px] flex flex-col'>
+          {winner && <Modal typeIcon={winner}/>}        
           <Header
             wrapperClassName='mb-5'
             turn={crossTurn}
           />
           <div className="grid grid-cols-3 gap-4 w-full mb-5">
             {tableTicTac.map((item, idx) => 
-              <TicTacField 
-                key={idx.toString()} 
-                markTable={() => markTable(idx)} 
-                typeIcon={item} />)
+              <div key={idx}>
+                <TicTacField
+                  markTable={() => markTable(idx)} 
+                  typeIcon={item} />
+              </div>
+              )
             }
           </div>
           <Footer />

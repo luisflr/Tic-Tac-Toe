@@ -18,9 +18,8 @@ function Header({ wrapperClassName, turn }: HeaderProps) {
           strokeColor='#F2B237'
         />
       </div>
-      <Button
-        wrapperClassName='bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
-        label='TURN'
+      <div
+        className=' flex bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
       >
         {turn
           ? <XIcon
@@ -32,10 +31,13 @@ function Header({ wrapperClassName, turn }: HeaderProps) {
               strokeColor='#A9BFCA'
             />
         
-        }
-      </Button>
+        } TURN
+      </div>
       <Button
-        wrapperClassName='bg-[#A9BFCA] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
+        wrapperClassName='
+          bg-[#A9BFCA] px-7 py-2 font-bold w-fit transition
+          hover:scale-110'
+        onClick={() => {window.location.assign('/')}}
       >
         <ReloadIcon
           wrapperClassName='w-5 h-5'

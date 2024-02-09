@@ -1,10 +1,10 @@
 import XIcon from '../../assets/icons/XIcon'
 import CircleIcon from '../../assets/icons/CircleIcon'
+import { TicTacFieldProps } from '../Interfaces'
 
-function TicTacField({ typeIcon, markTable, key }: { typeIcon: string, markTable: () => void, key: string }) {
+function TicTacField({ typeIcon, markTable }: TicTacFieldProps) {
   return (
-    <button 
-      key={key}
+    <button
       onClick={markTable}
       className='m-auto w-36 h-32 rounded-xl shadow-2xl flex items-center justify-center bg-[#1F3540] cursor-default'>
       {typeIcon === '' 
