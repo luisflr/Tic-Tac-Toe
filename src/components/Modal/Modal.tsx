@@ -1,8 +1,9 @@
+import { Dispatch, SetStateAction } from "react"
 import CircleIcon from "../../assets/icons/CircleIcon"
 import XIcon from "../../assets/icons/XIcon"
 import Button from "../Button/Button"
 
-function Modal({ typeIcon }: { typeIcon: string}) {
+function Modal({ typeIcon, setwinner }: { typeIcon: string, setwinner: Dispatch<SetStateAction<string>>}) {
   return (
     <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
       <div className="fixed inset-0 bg-[#050c0f] bg-opacity-70 transition-opacity"></div>

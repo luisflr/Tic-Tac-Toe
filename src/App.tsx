@@ -38,15 +38,12 @@ function App() {
     else if (!array.includes('')) return 'empate'
   }
   
-  useEffect(() => {
-    if (winner !== '') console.log(winner)
-  },[winner])
 
   return (
     <>
       <main className='bg-[#192A32] h-screen w-screen grid place-content-center'>
         <section className='w-[470px] max-h-[800px] flex flex-col'>
-          {winner && <Modal typeIcon={winner}/>}        
+          {winner && <Modal typeIcon={winner} setwinner={setwinner}/>}        
           <Header
             wrapperClassName='mb-5'
             turn={crossTurn}

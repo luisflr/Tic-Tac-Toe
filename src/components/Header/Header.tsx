@@ -19,7 +19,7 @@ function Header({ wrapperClassName, turn }: HeaderProps) {
         />
       </div>
       <div
-        className=' flex bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit'
+        className=' flex bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit justify-center items-center'
       >
         {turn
           ? <XIcon
