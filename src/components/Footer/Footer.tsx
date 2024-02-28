@@ -1,22 +1,22 @@
 import ScoreSection from './ScoreSection/ScoreSection'
 
-function Footer() {
+function Footer({ cross, circle, tie} : {cross: string, circle: string, tie: string}) {
   return (
     <footer className='w-full flex justify-between items-center'>
       <ScoreSection 
         wrapperClassName='bg-[#31C4BE]'
         playerLabel='X PLAYER'
-        scoreLabel='0'
+        scoreLabel={cross}
       />
       <ScoreSection 
         wrapperClassName='bg-[#A8BEC9]'
         playerLabel='TIES'
-        scoreLabel='0'
+        scoreLabel={tie}
       />
       <ScoreSection 
         wrapperClassName='bg-[#F2B237]'
         playerLabel='O PLAYER'
-        scoreLabel='0'
+        scoreLabel={circle}
       />
     </footer>
   )

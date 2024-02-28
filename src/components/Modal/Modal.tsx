@@ -19,13 +19,21 @@ function Modal({ typeIcon, setwinner }: { typeIcon: string, setwinner: (winner: 
                       wrapperClassName='w-10 h-10 mr-2'
                       strokeColor='#31C4BE'
                     />
-                    : <CircleIcon
-                      wrapperClassName='w-8 h-8 mr-2'
-                      strokeColor='#F2B237'
-                    />
+                    : typeIcon === 'circle' 
+                      ?<CircleIcon
+                        wrapperClassName='w-8 h-8 mr-2'
+                        strokeColor='#F2B237'
+                      />
+                      : null
                   }
                   <p
-                    className={`text-2xl font-bold ${typeIcon === 'cross' ? 'text-[#31C4BE]': 'text-[#F2B237]'}`}>TAKES THE ROUND</p>
+                    className={`text-2xl font-bold ${typeIcon === 'cross' 
+                      ? 'text-[#31C4BE]'
+                      : typeIcon === 'circle' ? 'text-[#F2B237]' : 'text-[#A9BFCA]' }`
+                    }
+                  >
+                    {typeIcon === 'empate' ? 'THE ROUND IS TIE' : 'TAKES THE ROUND'}
+                  </p>
                 </div>
                 <div className='flex space-x-4'>
                   <Button
