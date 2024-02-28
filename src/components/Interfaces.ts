@@ -9,7 +9,7 @@ export interface ButtonProps {
 
 export interface HeaderProps {
   wrapperClassName: string,
-  turn: boolean
+  turn: string
 }
 
 export interface ScoreSectionProps {

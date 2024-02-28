@@ -21,7 +21,7 @@ function Header({ wrapperClassName, turn }: HeaderProps) {
       <div
         className=' flex bg-[#1F3540] px-7 py-2 font-bold text-[#A9BFCA] w-fit justify-center items-center'
       >
-        {turn
+        {turn === 'cross'
           ? <XIcon
               wrapperClassName='w-5 h-5 mr-2'
               strokeColor='#A9BFCA'
