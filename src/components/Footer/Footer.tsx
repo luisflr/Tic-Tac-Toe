@@ -1,6 +1,7 @@
+import { FooterProps } from '../Interfaces'
 import ScoreSection from './ScoreSection/ScoreSection'
 
-function Footer({ cross, circle, tie} : {cross: string, circle: string, tie: string}) {
+function Footer({ cross, circle, tie}: FooterProps) {
   return (
     <footer className='w-full flex justify-between items-center'>
       <ScoreSection 

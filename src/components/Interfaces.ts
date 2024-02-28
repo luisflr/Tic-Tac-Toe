@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
 export interface ButtonProps {
-  wrapperClassName: string
-  children?: ReactNode
-  label?: string
+  wrapperClassName: string,
+  children?: ReactNode,
+  label?: string,
   onClick: () => void
 }
 
@@ -13,12 +13,23 @@ export interface HeaderProps {
 }
 
 export interface ScoreSectionProps {
-  wrapperClassName: string
-  playerLabel: string
-  scoreLabel: string
+  wrapperClassName: string,
+  playerLabel: string,
+  scoreLabel: string,
 }
 
 export interface TicTacFieldProps {
-  typeIcon: string
+  typeIcon: string,
   markTable: () => void
+}
+
+export interface ModalProps { 
+  typeIcon: string,
+  setwinner: (winner: string)=> void
+}
+
+export interface FooterProps {
+  cross: string, 
+  circle: string, 
+  tie: string
 }

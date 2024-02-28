@@ -5,6 +5,7 @@ import { TicTacFieldProps } from '../Interfaces'
 function TicTacField({ typeIcon, markTable }: TicTacFieldProps) {
   return (
     <button
+      disabled={typeIcon !== '' ? true : false}
       onClick={markTable}
       className='m-auto w-36 h-32 rounded-xl shadow-2xl flex items-center justify-center bg-[#1F3540] cursor-default'>
       {typeIcon === '' 
