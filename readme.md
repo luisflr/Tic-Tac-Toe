@@ -13,3 +13,5 @@
 > - **Bonus 1**: Save the game state in the browser so that it’s preserved if the player refreshes their browser
 > - **Bonus 2**: Instead of having the computer randomly make their moves, try making it clever so it’s proactive in blocking your moves and trying to win
 > - Download the project and go through the README.md file. This will provide further details about the project and help you get set up.
+
+![image](https://github.com/luisflr/Tic-Tac-Toe/assets/37960514/23c36d8f-ccdc-40c2-a93c-c41203dc8a8c)
