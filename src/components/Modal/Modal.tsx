@@ -30,7 +30,7 @@ function Modal({ typeIcon, setwinner }: { typeIcon: string, setwinner: Dispatch<
                 </div>
                 <div className='flex space-x-4'>
                   <Button
-                    onClick={() => {}}
+                    onClick={() => setwinner('')}
                     wrapperClassName='bg-[#A9BFCA] px-7 py-2 font-bold text-[#192A32] w-fit transition
                     hover:scale-110'
                     label='QUIT'
